@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google font Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="style.css"/>
+    <title>Gmail Clone</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <!-- Header starts -->
+    <div class="header">
+        <div class="header_left">
+            <span class="material-icons">
+                menu
+                </span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67sSlt0mXyUSICtBiwidtvglgZV8q1pq8kXVCdPZ-0jRQfXXxwdkzgXmCEjRPtNAZtnw&usqp=CAU"
+            alt="">
+        </div>
+
+        <div class="header_middle">
+            <span class="material-icons">search</span>
+             <input type="text" placeholder="Search Mail"/>
+             <span class="material-icons">arrow_drop_down</span>      
+        </div>
+
+        <div class="header_right">
+            <span class="material-icons">help_outline</span>
+            <span class="material-icons">apps</span>
+            <span class="material-icons">notifications</span>
+            <span class="material-icons" onclick="signup()">account_circle</span>
+        </div>
+
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main body start -->
+    <div class="main_body">
+        <!-- sidebarstarts -->
+        <div class="sidebar">
+
+            <button class="sidebar_compose" onclick="sendEmail()">
+                <span class="material-icons" > add </span> Compose
+            </button>
+            <div class="sidebarOption">
+                <span class="material-icons"> inbox </span>
+                <h3 onclick="inboxMails()">Inbox</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-icons"> access_time </span>
+                <h3>Starred</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-icons"> label_important </span>
+                <h3>Important</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-icons"> near_me </span>
+                <h3 onclick="sentMails()">Sent</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-icons"> note </span>
+                <h3 onclick="draftMails()">Drafts</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-icons"> expand_more </span>
+                <h3>More</h3>
+            </div>
+
+            <div class="sidebar_footer">
+                <div class="sidebar_footerIcons">
+                    <span class="material-icons"> person </span>
+                    <span class="material-icons"> duo </span>
+                    <span class="material-icons">phone </span>
+                </div>
+            </div>
+
+        </div>
+        <!-- sidebarstarts -->
+
+        <!-- email list starts -->
+        <div class="emailList">
+            <!-- settings starts -->
+           <div class="emailList_setting">
+               <div class="emailList_settingsLeft">
+                    <input type="checkbox">
+                    <span class="material-icons"> arrow_drop_down </span>
+                    <span class="material-icons"> redo </span>
+                    <span class="material-icons"> more_vert </span>
+               </div>
+
+               <div class="emailList_settingsRight">
+                    <span class="material-icons"> chevron_left </span>
+                    <span class="material-icons"> chevron_right </span>
+                    <span class="material-icons"> keyboard_hide </span>
+                    <span class="material-icons"> settings </span>                  
+               </div>
+
+           </div>
+
+            <!-- setting ends -->
+
+            <!-- section starts -->
+           <div class="emailList_sections">
+
+                <div class="section section_selected">
+                    <span class="material-icons"> inbox </span>
+                    <h4 onclick="primaryMails()">Primary</h4>
+                </div> 
+
+                <div class="section">
+                    <span class="material-icons">people </span>
+                    <h4>Social</h4>
+                </div> 
+
+                <div class="section">
+                <span class="material-icons"> local_offer </span>
+                <h4>Promotions</h4>
+                </div> 
+
+           </div>
+
+
+            <!-- section ends -->
+
+
+            <!-- Email list row  1 started -->
+            <div class="primary_mails">
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Primary mails1</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Primary Mail<span class="emailRow_description">--Here you can see all primary mails</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Primary mails2</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Primary Mail<span class="emailRow_description">--Here you can see all primary mails</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Primary mails3</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Primary Mail<span class="emailRow_description">--Here you can see all primary mails</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                 <!-- Email row starts -->
+                 <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Primary mails4</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Primary Mail<span class="emailRow_description">--Here you can see all primary mails</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                 <!-- Email row starts -->
+                 <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Primary mails5</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Primary Mail<span class="emailRow_description">--Here you can see all primary mails</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+            </div>
+            <!-- Email row list 1 ended -->
+
+
+
+            <!-- Email list row  2 started -->
+            <div class="inbox_mails">
+                <!-- Email row starts -->
+                 <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                   </div>
+                        <h3 class="emailRow_title">Disney+Hotstar</h3>
+                        <div class="emailRow_message">
+                            <h4>You got New Subscribe <span class="emailRow_description">--You have new offer for Subscription</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                 <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Flipkart</h3>
+                        <div class="emailRow_message">
+                            <h4>Flipkart Sale is live <span class="emailRow_description">--Get the products Upto 50% OFF</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">PhonePe</h3>
+                        <div class="emailRow_message">
+                            <h4>Payment reminder <span class="emailRow_description">--Your Payment for DTH is on due..</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">HDFC HOME LOANS</h3>
+                        <div class="emailRow_message">
+                            <h4>HDFC's Blockbuster Festive Offer <span class="emailRow_description">--Get the Loan at minimum interest rate of 6.7</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Propelled Team</h3>
+                        <div class="emailRow_message">
+                            <h4>Reminder⏰ - 3 days left to pay your EMI     <span class="emailRow_description">--This is a gentle reminder for your payment of ₹ 7854 for the month of October that is due in 3 days. </span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">ACKO General Insurance</h3>
+                        <div class="emailRow_message">
+                            <h4>85% Off on Car insurance <span class="emailRow_description">--Reason to stay insured with Us..</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                
+
+               
+            </div>
+            <!-- Email row list 2 ended -->
+
+
+            <!-- Email list row 3  started -->
+            <div class="sent_mails">
+                <!-- Email row starts -->
+                 <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">GOIBIBO</h3>
+                        <div class="emailRow_message">
+                            <h4>Request for Refund<span class="emailRow_description">--I have cancelled my flight due to personal reason..</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">HDFC BANK</h3>
+                        <div class="emailRow_message">
+                            <h4>Supporting documents for Loan <span class="emailRow_description">--Hi Sir, Please find the documents
+                            </span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+               
+            </div>
+            <!-- Email row list 3 ended -->
+            
+
+            <!-- Email list row 4  started -->
+            <div class="draft_mails">
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>
+                    </div>
+                        <h3 class="emailRow_title">Draft mails 1</h3>
+                        <div class="emailRow_message">
+                            <h4>See the Draft Mails <span class="emailRow_description">--you can Edit the mail</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>                        
+                    </div>
+                        <h3 class="emailRow_title">Draft mails 2</h3>
+                        <div class="emailRow_message">
+                            <h4>See the Draft Mails <span class="emailRow_description">--you can Edit the mail</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>                        
+                    </div>
+                        <h3 class="emailRow_title">Draft mails 3</h3>
+                        <div class="emailRow_message">
+                            <h4>See the Draft Mails <span class="emailRow_description">--you can Edit the mail</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>                        
+                    </div>
+                        <h3 class="emailRow_title">Draft mails 4</h3>
+                        <div class="emailRow_message">
+                            <h4>See the Draft Mails <span class="emailRow_description">--you can Edit the mail</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+                <!-- Email row starts -->
+                <div class="emailRow">
+                    <div class="emailRow_options">
+                        <input type="checkbox"/>
+                        <span class="material-icons"> star_border </span>
+                        <span class="material-icons"> label_important </span>                        
+                    </div>
+                        <h3 class="emailRow_title">Draft mails 5</h3>
+                        <div class="emailRow_message">
+                            <h4>See the Draft Mails <span class="emailRow_description">--you can Edit the mail</span></h4>
+                        </div>
+                            <p class="emailRow_time">10pm</p>
+                    </div>
+                <!-- Email row ends -->
+
+               
+            </div>
+            <!-- Email row list 4 ended -->
+
+        </div>
+        <!-- email list ends -->
+
+
+
+
+
+
+
+        <!-- <dialogbox starts-->
+            <div class="modal_fade" id="compose-modal" tabindex="-1" role="dialog">
+               <div class="modal-dialog modal-lg"> 
+                  
+                    
+                    <form onsubmit="return sendEmail();">
+                       <div class="modal-body">
+                            <div class="form-group">
+                            <input type="email" class="form-control" id="compose-to" placeholder="To" required />
+                            </div>
+                
+                            <div class="form-group">
+                            <input type="text" class="form-control" id="compose-subject" placeholder="Subject" required />
+                            </div>
+                    
+                            <div class="form-group">
+                            <textarea class="form-control" id="compose-message" placeholder="Message" rows="15" required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <button type="submit" id="send-button" class="btn btn-primary">Send</button>
+                            <button type="button" id="close_btn" class="btn btn-default" data-dismiss="modal" onclick="main_button()">Close</button>
+                        </div>
+                        </form>
+                 
+                </div>
+              </div>
+              <!-- dialogbox ends -->
+
+              <!-- signup window started -->
+              <div class="popup_form" id="sign_uppage">
+                <form class="form_container">
+                <h1>Enter your credentials</h1>
+                <label><b>Email:<b></label>
+                <input type="text" class="mail" placeholder="Enter you Mail ID" required autocomplete="off">
+                <label><b>Password:</b></label>
+                <input type="text" class="pwd" placeholder="Enter Password" required autocomplete="off">
+                <button type="Submit" class="submit_btn" onclick="credentials()">login</button>
+                <button class="close_btn" onclick="close_button()">Close</button>
+                </form>   
+              </div>
+              <!-- signup window started -->
+
+</body>
+<!-- Main body end -->
+
+</html>
